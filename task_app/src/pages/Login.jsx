@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser, logoutUser } from '../actions/authActions';
+import { useNavigate } from 'react-router-dom';
+import { loginUser } from '../actions/authActions';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -8,7 +9,14 @@ const Login = () => {
     const dispatch = useDispatch();
     const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
+ 
+    useEffect(() => {
+        if (isAuthenticated) {
+            navigate('/tasks');
+        }
+    }, [isAuthenticated, navigate]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -16,12 +24,11 @@ const Login = () => {
         if (!username || !password) {
             setError('Please enter both username and password');
             return;
-        }
-        else {
+        } else {
             setError('');
             dispatch(loginUser(username, password));
+           
         }
-
     };
 
     return (
