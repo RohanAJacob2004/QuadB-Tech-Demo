@@ -1,12 +1,21 @@
 ### Redux Todo App
 ## A sleek and efficient todo application with user authentication built with Redux for state management, providing a seamless task tracking experience.
-# 🚀 Features
+# Features
 
 - Create, update, and delete todos
 - Mark todos as complete/incomplete
 -  Filter todos by status (All, Active, Completed)
 -  Persistent state management with Redux
 -  Responsive design
+
+# How to install and run
+- cd into folder
+- npm i
+- npm run dev
+
+# Login
+- Default username is admin
+- Default password is password
 
 # 🛠 Technologies Used
 
@@ -15,7 +24,7 @@
 - Redux Toolkit
 - React-Redux
 - Vite
-- CSS/Tailwind CSS (optional)
+- CSS/Tailwind CSS 
 
 ### Screenshots
 
