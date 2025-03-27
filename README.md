@@ -1,3 +1,5 @@
+Hosted on https://quad-b-tech-demo.vercel.app/
+
 ### Redux Todo App
 ## A sleek and efficient todo application with user authentication built with Redux for state management, providing a seamless task tracking experience.
 # Features
